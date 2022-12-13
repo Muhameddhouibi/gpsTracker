@@ -4,7 +4,6 @@ plugins {
     id 'kotlin-android-extensions'
     id 'kotlin-kapt'
     id 'com.google.dagger.hilt.android'
-    id 'androidx.navigation.safeargs.kotlin'
 }
 
 android {
@@ -38,6 +37,10 @@ android {
 
 dependencies {
 
+    //Di - Hilt
+    implementation "com.google.dagger:hilt-android:2.44"
+    kapt "com.google.dagger:hilt-compiler:2.44"
+
     implementation 'androidx.core:core-ktx:1.9.0'
     implementation 'androidx.appcompat:appcompat:1.5.1'
     implementation 'com.google.android.material:material:1.7.0'
@@ -53,7 +56,7 @@ dependencies {
     implementation 'com.google.android.material:material:1.8.0-alpha03'
 
     // Location Services
-    implementation 'com.google.android.gms:play-services-location:21.0.1'
+    implementation "com.google.android.gms:play-services-location:21.0.1"
 
     // Room
     implementation "androidx.room:room-runtime:2.4.3"
@@ -77,27 +80,21 @@ dependencies {
     // Activity KTX for viewModels()
     implementation "androidx.activity:activity-ktx:1.6.1"
 
-    //Dagger - Hilt
-    implementation "com.google.dagger:hilt-android:2.44"
-    kapt "com.google.dagger:hilt-android-compiler:2.44"
-
-    implementation "androidx.hilt:hilt-lifecycle-viewmodel:1.0.0-alpha03"
-    kapt "androidx.hilt:hilt-compiler:1.0.0"
-
     // Easy Permissions
     implementation 'pub.devrel:easypermissions:3.0.0'
 
     // Timber
     implementation 'com.jakewharton.timber:timber:4.7.1'
 
-    // MPAndroidChart
-    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
-
     //lifecycle
     implementation 'android.arch.lifecycle:extensions:1.1.1'
+
+    // Google Maps Location Services
+    implementation 'com.google.android.gms:play-services-location:21.0.1'
+    implementation 'com.google.android.gms:play-services-maps:18.1.0'
 }
 
 // Allow references to generated code
 kapt {
-    correctErrorTypes true
+    correctErrorTypes = true
 }

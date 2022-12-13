@@ -1,5 +1,9 @@
 <resources>
     <string name="app_name">GpsTracker</string>
     <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">AIzaSyDPjLKiQ03CIsvXtOWpAhiBBssHIVS91Ic</string>
+    <string name="distance">Distance</string>
+    <string name="start">Start</string>
+    <string name="stop">Stop</string>
+    <string name="finish">Finish</string>
 
 </resources>
